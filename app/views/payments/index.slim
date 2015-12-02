@@ -1,0 +1,7 @@
+= form_tag '/payments/checkout', id: 'checkout_form'
+  #payment_form
+  .form-group.hidden
+    = select_tag :amount, options_for_select([10.00, 2222.22, 5001.00]), include_blank: false, class: 'form-control'
+  .form-group.hidden
+    = submit_tag 'Pay', class: 'btn btn-success', data: { disable_with: 'Processing...' }
+div#payment_form_loader.hidden Payment form is loading...
