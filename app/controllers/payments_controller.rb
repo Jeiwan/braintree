@@ -15,7 +15,6 @@ class PaymentsController < ApplicationController
       payment_method_nonce: params[:payment_method_nonce]
     )
 
-    puts result.transaction.inspect
     if result.success?
       redirect_to payments_path, notice: 'Successful payment'
     else
